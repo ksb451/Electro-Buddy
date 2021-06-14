@@ -1,6 +1,7 @@
+CURRENCY = "Rs."
 $(document).ready(function(){
 	cat();
-	brand();
+	
 	product();
 	//cat() is a funtion fetching category record from database whenever page is load
 	function cat(){
@@ -14,17 +15,8 @@ $(document).ready(function(){
 			}
 		})
 	}
-	//brand() is a funtion fetching brand record from database whenever page is load
-	function brand(){
-		$.ajax({
-			url	:	"action.php",
-			method:	"POST",
-			data	:	{brand:1},
-			success	:	function(data){
-				$("#get_brand").html(data);
-			}
-		})
-	}
+	
+	
 	//product() is a funtion fetching product record from database whenever page is load
 		function product(){
 		$.ajax({
@@ -84,9 +76,12 @@ $(document).ready(function(){
 		given string and with the help of sql query we will match user given string to our database keywords column then matched product 
 		we will show 
 	*/
-	$("#search_btn").click(function(){
+	$("#search_btn").click(function(event){
+		event.preventDefault();
 		$("#get_product").html("<h3>Loading...</h3>");
 		var keyword = $("#search").val();
+		console.log(keyword);
+		//debugger;
 		if(keyword != ""){
 			$.ajax({
 			url		:	"action.php",
@@ -98,7 +93,8 @@ $(document).ready(function(){
 					$("body").scrollTop(683);
 				}
 			}
-		})
+		});
+		//debugger;
 		}
 	})
 	//end
