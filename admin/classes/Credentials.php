@@ -83,6 +83,3 @@ if (isset($_POST['admin_login'])) {
 		exit();
 	}
 }
-
-
-?>

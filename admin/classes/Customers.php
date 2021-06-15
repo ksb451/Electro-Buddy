@@ -64,6 +64,3 @@ if (isset($_POST["GET_CUSTOMER_ORDERS"])) {
 		exit();
 	}
 }
-
-
-?>

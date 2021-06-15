@@ -77,12 +77,12 @@ $(document).ready(function(){
 		we will show 
 	*/
 	$("#search_btn").click(function(event){
-		event.preventDefault();
 		$("#get_product").html("<h3>Loading...</h3>");
 		var keyword = $("#search").val();
 		console.log(keyword);
 		//debugger;
 		if(keyword != ""){
+			event.preventDefault();
 			$.ajax({
 			url		:	"action.php",
 			method	:	"POST",
@@ -207,6 +207,7 @@ $(document).ready(function(){
 		var row = $(this).parent().parent();
 		var price = row.find('.price').val();
 		var qty = row.find('.qty').val();
+
 		if (isNaN(qty)) {
 			qty = 1;
 		};
@@ -220,7 +221,6 @@ $(document).ready(function(){
 			net_total += ($(this).val()-0);
 		})
 		$('.net_total').html("Total : $ " +net_total);
-
 	})
 	//Change Quantity end here 
 

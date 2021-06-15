@@ -3,30 +3,30 @@
 <?php include_once("./templates/navbar.php"); ?>
 <div class="container-fluid">
   <div class="row">
-    
+
     <?php include "./templates/sidebar.php"; ?>
 
 
-      <div class="row">
-      	<div class="col-10">
-      		<h2>Manage Brand</h2>
-      	</div>
-      	<div class="col-2">
-      		<a href="#" data-toggle="modal" data-target="#add_brand_modal" class="btn btn-primary btn-sm">Add Brand</a>
-      	</div>
+    <div class="row">
+      <div class="col-10">
+        <h2>Manage Brand</h2>
       </div>
-      
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Name</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody id="brand_list">
-            <!-- <tr>
+      <div class="col-2">
+        <a href="#" data-toggle="modal" data-target="#add_brand_modal" class="btn btn-primary btn-sm">Add Brand</a>
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-striped table-sm">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="brand_list">
+          <!-- <tr>
               <td>1</td>
               <td>ABC</td>
               <td>FDGR.JPG</td>
@@ -35,9 +35,9 @@
               <td>aPPLE</td>
               <td><a class="btn btn-sm btn-info"></a><a class="btn btn-sm btn-danger">Delete</a></td>
             </tr> -->
-          </tbody>
-        </table>
-      </div>
+        </tbody>
+      </table>
+    </div>
     </main>
   </div>
 </div>
@@ -56,19 +56,19 @@
       </div>
       <div class="modal-body">
         <form id="add-brand-form" enctype="multipart/form-data">
-        	<div class="row">
-        		<div class="col-12">
-        			<div class="form-group">
-		        		<label>Brand Name</label>
-		        		<input type="text" name="brand_title" class="form-control" placeholder="Enter Brand Name">
-		        	</div>
-        		</div>
-        		<input type="hidden" name="add_brand" value="1">
-        		<div class="col-12">
-        			<button type="button" class="btn btn-primary add-brand">Add Product</button>
-        		</div>
-        	</div>
-        	
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label>Brand Name</label>
+                <input type="text" name="brand_title" class="form-control" placeholder="Enter Brand Name">
+              </div>
+            </div>
+            <input type="hidden" name="add_brand" value="1">
+            <div class="col-12">
+              <button type="button" class="btn btn-primary add-brand">Add Product</button>
+            </div>
+          </div>
+
         </form>
       </div>
     </div>
@@ -101,7 +101,7 @@
               <button type="button" class="btn btn-primary edit-brand-btn">Update Brand</button>
             </div>
           </div>
-          
+
         </form>
       </div>
     </div>
